@@ -20,6 +20,8 @@ body, html {
 .navbar ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 .navbar li {
     display: inline;
@@ -28,6 +30,35 @@ body, html {
 .navbar a:hover {
     text-decoration: underline;
 }
+@media (max-width: 768px){
+    .navbar {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    .navbar ul {
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar li {
+        margin: 5px 0;
+        width: 70%;
+        text-align: ;
+    }
+    .navbar a {
+        padding: 8px 0;
+        font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .navbar li {
+        
+    }
+    .navbar a {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+}
+
 .video-section {
     position: relative;
     width: 100%;
@@ -40,15 +71,36 @@ body, html {
     height: auto;
     object-fit: cover;
 }
-.title-overlay {
+/* .title-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+} */
+
+@media (max-width: 768px) {
+    .video-section {
+        height: 400px;
+    }
+    /* .title-overlay {
+        font-size: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    } */
+
+}
+@media (max-width: 480px) {
+    .video-section {
+        height: 150px;
+    }
+    /* .title-overlay {
+        font-size: 24px;
+        padding: 0 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    } */
 }
 
 #welcome-section {
